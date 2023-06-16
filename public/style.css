@@ -1,0 +1,20 @@
+* {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   outline: none;
+   text-decoration: none;
+   list-style: none;
+   background: transparent;
+   resize: none;
+   font-family: 'Roboto', sans-serif;
+   box-sizing: border-box;
+   color: #fff;
+}
+
+body {
+   width: 100vw;
+   min-height: 100vh;
+   background: radial-gradient( circle farthest-corner at 10% 20%,  #07a950 0%, #004b4d 90% ) no-repeat;
+   overflow-x: hidden;
+}

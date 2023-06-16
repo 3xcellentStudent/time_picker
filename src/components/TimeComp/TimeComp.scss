@@ -1,0 +1,33 @@
+$index: calc(1vw + 1vh);
+
+.time-component {
+   display: grid;
+   align-items: center;
+   grid-template: 1fr / repeat(7, 1fr);
+   position: relative;
+   width: 90%;
+   margin: 0 auto;
+
+   .arrow-item {
+      position: absolute;
+      width: $index;
+      height: $index;
+      cursor: pointer;
+      &.prev {left: calc($index * -1.5);}
+      &.next {right: calc($index * -1.5);}
+      
+      .arrow-polygon {
+         pointer-events: none;
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         clip-path: polygon(60% 0, 20% 50%, 60% 100%, 40% 100%, 0% 50%, 40% 0);
+         background: #fff;
+
+         &.next {
+            right: 0;
+            transform: rotate(180deg);
+         }
+      }
+   }
+}

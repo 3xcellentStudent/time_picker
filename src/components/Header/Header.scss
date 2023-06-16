@@ -1,0 +1,56 @@
+$index: calc(1vw + 1vh);
+
+.header {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: #fff;
+   padding: $index 0;
+
+   .header-h1 {
+      font-weight: 700;
+   }
+
+   .choose-month_year {
+      margin: $index 0;
+      position: relative;
+      font-weight: 500;
+      background: #58D68D;
+      padding: calc($index / 3) calc($index / 1.5);
+      border-radius: calc($index / 2);
+      min-width: calc($index * 8);
+      text-align: center;
+      
+      .header-month {
+         font-size: calc($index / 1.25);
+         margin: 0 calc($index / 2) 0 0;
+      }
+      .header-year {
+         font-size: calc($index / 1.25);
+      }
+      .arrow-item {
+         position: absolute;
+         width: $index;
+         height: $index;
+         cursor: pointer;
+         &.prev {left: calc($index * -1.5);}
+         &.next {right: calc($index * -1.5);}
+         
+         .arrow-polygon {
+            pointer-events: none;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            clip-path: polygon(60% 0, 20% 50%, 60% 100%, 40% 100%, 0% 50%, 40% 0);
+            background: #fff;
+
+            &.next {
+               right: 0;
+               transform: rotate(180deg);
+            }
+         }
+      }
+   }
+}

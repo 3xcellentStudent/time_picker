@@ -1,0 +1,7 @@
+$index: calc(1vw + 1vh);
+
+.main {
+   padding: 0 calc($index * 2);
+   display: grid;
+   grid-template: 100px / repeat(7, 1fr);
+}
